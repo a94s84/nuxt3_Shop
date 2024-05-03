@@ -1,0 +1,166 @@
+[
+    {
+      "id": 1,
+      "flavor": "Heavy Cream",
+      "name": "But. Cover",
+      "price": "680",
+      "url": "https://www.but.com.tw/system/packages/package_covers/000/000/004/medium/%E5%8C%85%E8%A3%9D-11.png",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、杏仁粉、雞蛋、鹽、香草籽(蛋奶素)",
+      "description": "忠厚溫潤的累積，不是笨重負擔的累贅"
+    },
+    {
+      "id": 2,
+      "flavor": "Heavy Cream",
+      "name": "Leopard Cover",
+      "price": "680",
+      "url": "https://www.but.com.tw/system/packages/package_covers/000/000/068/medium/%E8%97%9D%E8%A1%93%E5%AE%B63.0%E5%AE%98%E7%B6%B2%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-03.png",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、杏仁粉、雞蛋、鹽、香草籽(蛋奶素)",
+      "description": "忠厚溫潤的累積，不是笨重負擔的累贅"
+    },
+    {
+      "id": 3,
+      "flavor": "Heavy Cream",
+      "name": "Fluorescent Cover",
+      "price": "680",
+      "url": "https://www.but.com.tw/system/packages/package_covers/000/000/059/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-11.png",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、杏仁粉、雞蛋、鹽、香草籽(蛋奶素)",
+      "description": "忠厚溫潤的累積，不是笨重負擔的累贅"
+    },
+    {
+      "id": 4,
+      "flavor": "Golden Pineapple",
+      "name": "Pineapple Cover",
+      "price": "730",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/025/medium/%E5%AE%98%E7%B6%B2%E5%8C%85%E8%A3%9D-%E9%87%91%E9%B3%B3%E6%A2%A8%E9%BB%91%E9%B3%B3%E6%A2%A8%E6%8B%9B%E7%89%8C-06.png",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-210g / 十入-350g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、金鑽鳳梨、雞蛋、杏仁粉、檸檬、鹽、香草籽(蛋奶素)",
+      "description": "如同靈魂出竅般心神交會，從不感到寂寞覺得冷"
+    },
+    {
+      "id": 5,
+      "flavor": "Golden Pineapple",
+      "name": "Pineapple Slice Cover",
+      "price": "730",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/069/medium/%E8%97%9D%E8%A1%93%E5%AE%B63.0%E5%AE%98%E7%B6%B2%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-09.png",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、金鑽鳳梨、雞蛋、杏仁粉、檸檬、鹽、香草籽(蛋奶素)",
+      "description": "如同靈魂出竅般心神交會，從不感到寂寞覺得冷"
+    },
+    {
+      "id": 6,
+      "flavor": "Golden Pineapple",
+      "name": "Tailored Cover",
+      "price": "730",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/056/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-07.png?1650621617",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、金鑽鳳梨、雞蛋、杏仁粉、檸檬、鹽、香草籽(蛋奶素)",
+      "description": "如同靈魂出竅般心神交會，從不感到寂寞覺得冷"
+    },
+    {
+      "id": 7,
+      "flavor": "Smoked Longan",
+      "name": "Why so serious?",
+      "price": "750",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/057/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-08.png?1650621691",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-228g / 十入-380g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、動物性鮮奶油、龍眼乾、杏仁條、杏仁角、雞蛋、杏仁粉、香草籽、鹽(蛋奶素)",
+      "description": "卸下常規來點即興，不讓理智走失也要哼唱快樂序曲"
+    },
+    {
+      "id": 8,
+      "flavor": "Smoked Longan",
+      "name": "Mekamee x Terrior",
+      "price": "750",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/071/medium/%E8%97%9D%E8%A1%93%E5%AE%B63.0%E5%AE%98%E7%B6%B2%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-10.png?1681379524",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-228g / 十入-380g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、動物性鮮奶油、龍眼乾、杏仁條、杏仁角、雞蛋、杏仁粉、香草籽、鹽(蛋奶素)",
+      "description": "卸下常規來點即興，不讓理智走失也要哼唱快樂序曲"
+    },
+    {
+      "id": 9,
+      "flavor": "Smoked Longan",
+      "name": "Style x Claim",
+      "price": "750",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/058/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-10.png?1650621710",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-228g / 十入-380g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、動物性鮮奶油、龍眼乾、杏仁條、杏仁角、雞蛋、杏仁粉、香草籽、鹽(蛋奶素)",
+      "description": "卸下常規來點即興，不讓理智走失也要哼唱快樂序曲"
+    },
+    {
+      "id": 10,
+      "flavor": "Honey Sea Salt",
+      "name": "Sensibility x Fantasy",
+      "price": "720",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/015/medium/%E5%AE%98%E7%B6%B2%E5%8C%85%E8%A3%9D%E5%8D%8A%E7%86%9F-10.png?1505793729",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-210g / 十入-350g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、乳酪、鹽、蜂蜜、麥芽(蛋奶素)",
+      "description": "卸下你是天我是地儘管擁抱，不在乎沒了我的自傲"
+    },
+    {
+      "id": 11,
+      "flavor": "Honey Sea Salt",
+      "name": "North Coast",
+      "price": "720",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/070/medium/%E8%97%9D%E8%A1%93%E5%AE%B63.0%E5%AE%98%E7%B6%B2%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-08.png?1681379506",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-210g / 十入-350g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、乳酪、鹽、蜂蜜、麥芽(蛋奶素)",
+      "description": "卸下你是天我是地儘管擁抱，不在乎沒了我的自傲"
+    },
+    {
+      "id": 12,
+      "flavor": "Honey Sea Salt",
+      "name": "Particularity",
+      "price": "720",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/055/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-02.png?1650621670",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-210g / 十入-350g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、乳酪、鹽、蜂蜜、麥芽(蛋奶素)",
+      "description": "卸下你是天我是地儘管擁抱，不在乎沒了我的自傲"
+    },
+    {
+      "id": 13,
+      "flavor": "Cocoa Filling",
+      "name": "Fantasy x Free",
+      "price": "880",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/016/medium/%E5%AE%98%E7%B6%B2%E5%8C%85%E8%A3%9D2-06.png?1507265662",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g0g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、巧克力、牛奶、鹽(蛋奶素)",
+      "description": "這樣的相處空氣，是甜蜜自在不是黏膩窒息"
+    },
+    {
+      "id": 14,
+      "flavor": "Cocoa Filling",
+      "name": "Lifestyles Cover",
+      "price": "880",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/067/medium/%E8%97%9D%E8%A1%93%E5%AE%B63.0%E5%AE%98%E7%B6%B2%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-02.png?1681379338",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g0g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、巧克力、牛奶、鹽(蛋奶素)",
+      "description": "這樣的相處空氣，是甜蜜自在不是黏膩窒息"
+    },
+    {
+      "id": 15,
+      "flavor": "Cocoa Filling",
+      "name": "Cool x Contrast",
+      "price": "880",
+      "url": "https://www.but.com.tw/system/packages/package_cover_1s/000/000/060/medium/2022%E6%96%B0%E9%9B%B6%E5%94%AE%E5%8E%BB%E8%83%8C%E5%8C%85%E8%A3%9D-09.png?1650621757",
+      "size": "六入-18x18x5.5cm / 十入-27x19x5.5cm",
+      "weight": "六入-198g / 十入-330g0g",
+      "ingredients": "無鹽發酵奶油、麵粉、糖、雞蛋、杏仁粉、巧克力、牛奶、鹽(蛋奶素)",
+      "description": "這樣的相處空氣，是甜蜜自在不是黏膩窒息"}
+  ]
