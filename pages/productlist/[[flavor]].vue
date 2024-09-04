@@ -21,6 +21,8 @@
     definePageMeta({
         layout: 'layoutproducts',
     })
+
+    console.log( route.query.maxPrice)
 </script>
 
 <template>
