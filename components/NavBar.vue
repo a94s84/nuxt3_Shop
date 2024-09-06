@@ -1,7 +1,7 @@
 <script setup>
   const flavor = ref("");
   const flavorError = ref(false)
-  const { login, logout } = useSupabaseLogin();
+  const { logout } = useSupabaseLogin();
   const user = useSupabaseUser();
   const handleSearch = () => {
     if(!flavor.value) {
@@ -31,7 +31,6 @@
           </div>
         </div>        
         <NuxtLink to="/login" v-else><img class="w-7 ml-3" src="https://static.tpx.tw/sff/pazzo/static/img/icon-member.svg" alt="login"></NuxtLink>
-        <NuxtLink to="/shoppingcart"><img class="w-6 ml-3" src="https://static.tpx.tw/sff/pazzo/static/img/icon-cart.svg" alt="checkout"></NuxtLink>
       </div>
     </header>
 </template>

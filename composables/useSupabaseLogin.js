@@ -1,24 +1,18 @@
 export default function () {
+    const user = useSupabaseUser();
     const supabase = useSupabaseClient();
+
     const login = async () => {
-        const {error} = supabase.auth.signInWithOAuth({  provider: 'google'})
-        if(error) console.log(error);
+        const {error} = supabase.auth.signInWithOAuth({ provider: 'google'})
+        if(error) alert(`登入失敗，請聯繫服務人員 ${error}`)
     }
 
-    const user = useSupabaseUser();
     const logout = async () => {
-        const { error } = supabase.auth.signOut()
-        try {
-            await $fetch('/api/_supabase/sesstion', {
-                method: 'POST',
-                body: { event: 'SIGNED_OUT', session: null}
-            })
-        } catch (error) {
-            return console.log(error)
-        }
+        const { error } = await supabase.auth.signOut()
+        if(error) alert(`登出失敗，請聯繫服務人員 ${error}`)
         user.value = null
         navigateTo('/')
     }
 
-    return { login, logout}
+    return { login, logout }
 }

@@ -17,6 +17,10 @@
     const onChangeInput = (data, name) => {
         info.value[name] = data;
     }
+    
+    definePageMeta({
+        middleware:['auth']
+    })
 </script>
 
 <template>

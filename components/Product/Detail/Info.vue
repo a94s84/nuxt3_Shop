@@ -13,6 +13,6 @@
         <p class="text-xs">淨重：{{biscuit.weight}}</p>
         <p class="text-xs mb-5">成份：{{biscuit.ingredients}}</p>
         <p class="text-xs">保存方式：賞味期12天，可常溫；若久放，建議冷藏。</p>
-        <div class="text-xs text-center mt-8 border border-white mx-auto p-2 w-[120px] cursor-pointer hover:bg-white hover:text-black">加入購物車</div>
+        <NuxtLink to="/sampleapply" class="block text-xs text-center mt-8 border border-white mx-auto p-2 w-[120px] cursor-pointer hover:bg-white hover:text-black">申請試吃</NuxtLink>
     </div>
 </template>
