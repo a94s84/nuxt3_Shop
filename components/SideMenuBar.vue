@@ -3,14 +3,18 @@
     const router = useRouter()
     const { products } = useProductsData();
     const flavorlist = products.reduce((a, curr) => a.includes(curr.flavor) ? a : [...a, curr.flavor],[])
+    const pdMaxPrice = Math.max(...products.map(p => p.price))
+    const pdMinPrice = Math.min(...products.map(p => p.price))
     const modalStatus = ref({
         flavor: true,
         price: true
     })
+    
     const priceRange = ref({
         min: "",
         max: ""
     })
+
     const priceRangeText = computed(() => {
         const minPrice = route.query.minPrice;
         const maxPrice = route.query.maxPrice;
@@ -19,12 +23,20 @@
         else if (minPrice && !maxPrice) {return `> $ ${minPrice}`}
         else return `$ ${minPrice} - $ ${maxPrice}`
     })
+
     const updateModalStatus = (key) => {
         modalStatus.value[key] = !modalStatus.value[key]
     }
+    
+    const checkScreenWidth = () => {
+        if(window.screen.width > 768) modalStatus.value.flavor = true
+        else modalStatus.value.flavor = false
+    }
+
     const handlerFlavorChage = (flavor) => {
         flavor ? navigateTo(`/productlist/${flavor}`) :navigateTo(`/productlist`)
     }
+
     const handlerPriceChange = () => {
         // updateModalStatus('price');
         if(priceRange.value.min && priceRange.value.max) {
@@ -39,6 +51,11 @@
         priceRange.value.min=""
         priceRange.value.max=""
     }
+
+    onMounted(() => {
+      checkScreenWidth();
+      window.addEventListener('resize', checkScreenWidth);
+    });
 </script>
 
 <template>
@@ -56,10 +73,10 @@
             <p class="bg-black text-white p-2 w-1/3">Price</p>
             <p class="py-2 px-1 text-center font-medium w-2/3" @click.prevent="updateModalStatus('price')">{{priceRangeText}}</p>
             <div class="flex items-center p-3 w-full text-xs border-t" v-show="modalStatus.price">
-                <input type="number" v-model="priceRange.min" placeholder="min" class="w-[35%] border p-1 focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+                <input type="number" v-model="priceRange.min" :placeholder="pdMinPrice" class="w-[35%] border p-1 focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
                 <span class="inline-block w-[5%] px-[1%] text-center">-</span>
-                <input type="number" v-model="priceRange.max" placeholder="max" class="w-[35%] border p-1 focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
-                <button class="w-[18%] ml-[5%] p-1 text-center bg-slate-200 rounded" @click.prevent="handlerPriceChange">Apply</button>
+                <input type="number" v-model="priceRange.max" :placeholder="pdMaxPrice" class="w-[35%] border p-1 focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+                <button class="w-[20%] ml-[5%] p-1 text-center bg-slate-200 rounded" @click.prevent="handlerPriceChange">Apply</button>
             </div>
         </div>
     </div>

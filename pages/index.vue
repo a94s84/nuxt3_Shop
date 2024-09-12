@@ -8,7 +8,7 @@
         <div class="relative w-full h-screen bg-no-repeat bg-cover bg-bottom bg-[url('https://www.but.com.tw/system/system_images/images/000/000/125/large/%E9%9B%BB%E8%85%A6%E9%A6%96%E9%A0%81-01.jpg')]">
             <div class="absolute w-full h-full flex justify-center items-end">
                 <NuxtLink to="/productlist" class="pb-5 flex flex-col items-center cursor-pointer">
-                    <div class="inline-block border border-white px-3 py-1 text-xl text-white font-bold transition ease-in-out delay-150 hover:bg-black hover:skew-y-6">Shop Now</div>
+                    <div class="inline-block border border-white px-3 py-1 text-xl text-white font-bold transition ease-in-out delay-150 hover:bg-black hover:skew-y-6">See More...</div>
                     <h1 class="text-4xl mb-10 text-white font-mono lg:text-8xl">In butter we TRUST</h1>
                 </NuxtLink>
             </div>

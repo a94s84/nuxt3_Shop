@@ -18,6 +18,7 @@
                 <img :src="user.user_metadata.picture" class="rounded-full m-auto mb-5">
                 {{user.user_metadata.full_name}}
                 {{user.user_metadata.email}}
+                
                 <button @click="logout" class="block my-5 mx-auto w-4xl py-1 px-7 rounded-md border border-black text-black bg-white hover:bg-zinc-100">Logout</button>
 
             </div>
