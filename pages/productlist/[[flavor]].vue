@@ -2,15 +2,18 @@
     const route = useRoute()
 
     //商品列表
-    const { products } = useProductsData();
+    const { data: products, pending, error} =  await useFetch('/api/productlist') 
     const productlist = computed(() => {
+        if (!products.value) return []; 
+
         const flavor = decodeURIComponent(route.params.flavor)
         const minPrice = parseInt(route.query.minPrice)
         const maxPrice = parseInt(route.query.maxPrice)
-        let filteredProduct = products
+
+        let filteredProduct = [...products.value]
         if(flavor) filteredProduct = filteredProduct.filter(i => i.flavor.trim() === flavor)
-        if(minPrice) filteredProduct = filteredProduct.filter(i => parseInt(i.price) >= parseInt(minPrice))
-        if(maxPrice) filteredProduct = filteredProduct.filter( i => i.price <= parseInt(maxPrice))
+        if(!isNaN(minPrice)) filteredProduct = filteredProduct.filter(i => parseInt(i.price) >= parseInt(minPrice))
+        if(!isNaN(maxPrice)) filteredProduct = filteredProduct.filter( i => i.price <= parseInt(maxPrice))
         return filteredProduct
     })
 
@@ -37,7 +40,7 @@
 <template>
     <div class="md:w-[65%] w-full">
         <div class="w-full flex flex-wrap shadow border md:p-4">
-            <template v-if="productlist.length > 0">
+            <template v-if="productlist && productlist.length > 0">
                 <ProductCard v-for="product in productlist" :key="product.id" :product="product" @favor="handleFavorite" :hearted="product.id in favorite"/>
             </template>
             <template v-else>
