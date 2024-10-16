@@ -1,21 +1,17 @@
 <script setup>
     const route = useRoute()
-    const { products } = useProductsData()
+    const flavor = encodeURI(route.params.flavor.trim())
+    const id = parseInt(route.params.id)
+    const {data: biscuit, error} = await useFetch(`/api/product/${flavor}-${id}`)
+    if(error.value) {
+        throw createError ({
+            statusCode: error.value.statusCode,
+            message: error.value.message,
+        })
+    }
     useHead({
         title: route.params.flavor,
     });
-
-    const biscuit = computed(() => {
-        return products.find((item) => item.id === parseInt(route.params.id) && item.flavor.trim() == route.params.flavor.trim())
-    })
-
-    if(!biscuit.value) {
-        throw createError ({
-            statusCode: 404,
-            message: `Biscuit with ID of ${route.params.id} does not exist`
-        })
-    }
-
     definePageMeta({
         layout: 'layoutproducts',
     })

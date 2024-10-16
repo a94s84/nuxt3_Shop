@@ -2,9 +2,9 @@
     const route = useRoute()
 
     //商品列表
-    const { data: products, pending, error} =  await useFetch('/api/productlist') 
+    const { data: products, error} = await useFetch('/api/productlist') 
     const productlist = computed(() => {
-        if (!products.value) return []; 
+        if (!products.value) return; 
 
         const flavor = decodeURIComponent(route.params.flavor)
         const minPrice = parseInt(route.query.minPrice)
@@ -40,7 +40,12 @@
 <template>
     <div class="md:w-[65%] w-full">
         <div class="w-full flex flex-wrap shadow border md:p-4">
-            <template v-if="productlist && productlist.length > 0">
+            <template v-if="error">
+                <div class="text-center w-full py-9">
+                    <p>取得商品列表时发生错误: <br/>{{ error.message }}</p>
+                </div>
+            </template>
+            <template v-if="productlist && productlist.length">
                 <ProductCard v-for="product in productlist" :key="product.id" :product="product" @favor="handleFavorite" :hearted="product.id in favorite"/>
             </template>
             <template v-else>
