@@ -16,7 +16,7 @@
         <label for="" class="mb-1 text-sm">{{title}}</label>
         <select name="" class="p-1 border rounded-md" @change="onChange" v-model="selectedValue">
             <option disabled value="">Select</option>
-            <option v-for="option in options" :key="option.id" :value="option">{{option}}</option>
+            <option v-for="option in options" :key="option.id" :value="option.id">{{option.name}}</option>
         </select>
     </div>
 </template>

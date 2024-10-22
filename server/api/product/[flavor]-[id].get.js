@@ -1,8 +1,15 @@
-import products from '@/data/products.json'
-export default defineEventHandler ((e)=> {
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient();
+
+export default defineEventHandler (async (e)=> {
     const param = e.context.params['flavor-:id'];
     const [flavor, id] = param.split('-').map(decodeURI);
-    const biscuit = products.find(p => p.flavor === flavor && p.id.toString() === id);
+    const  biscuit = await prisma.products.findUnique({
+        where: {
+            id: parseInt(id),
+            flavor: flavor
+        }
+    })
     if(!biscuit) {
         throw createError ({
             statusCode: 404,

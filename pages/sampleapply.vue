@@ -1,7 +1,14 @@
 <script setup>
-    const { products } = useProductsData();
-    const flavorlist = products.reduce((a, curr) => a.includes(curr.flavor) ? a : [...a, curr.flavor],[])
-    const amoutlist = ['20-50(boxes)', '50-100(boxes)','10-150(boxes)', '150 boxes or more']
+    const flavorlist = ref([]);
+    const amountlist = ref([]);
+    const { data, error } = await useFetch(`/api/sampleapply`);
+    if (error.value) {
+        console.error('Fetch error:', error.value);
+    } else {
+        const { flavorlist: fetchedFlavorlist = [], amountlist: fetchedAmountlist = [] } = data.value || {};
+        flavorlist.value = fetchedFlavorlist;
+        amountlist.value = fetchedAmountlist;
+    }
     const info = useState('applyInfo', () => {
         return {
             name: '',
@@ -33,7 +40,7 @@
             <ApplyInput title="Phone Number*" type="tel" name="phone" placeholder="09-0000-0000" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" @change-input="onChangeInput"/>
             <ApplyInput title="Email*" type="email" name="email"  placeholder="" @change-input="onChangeInput"/>
             <ApplySelect title="Biscuit Flavor*" :options="flavorlist" name="flavor" @change-input="onChangeInput" />
-            <ApplySelect title="Estimated Amount*" :options="amoutlist" name="amount" @change-input="onChangeInput" />
+            <ApplySelect title="Estimated Amount*" :options="amountlist" name="amount" @change-input="onChangeInput" />
             <ApplyDate title="Date of Pickup*" name="date" @change-input="onChangeInput"/>
             <ApplyInput title="Address*" type="text" name="address"  placeholder="" @change-input="onChangeInput"/>
         </div>

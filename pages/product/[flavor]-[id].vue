@@ -2,7 +2,7 @@
     const route = useRoute()
     const flavor = encodeURI(route.params.flavor.trim())
     const id = parseInt(route.params.id)
-    const {data: biscuit, error} = await useFetch(`/api/product/${flavor}-${id}`)
+    const {data: biscuit , error} = await useFetch(`/api/product/${flavor}-${id}`)
     if(error.value) {
         throw createError ({
             statusCode: error.value.statusCode,
