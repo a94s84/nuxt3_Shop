@@ -1,4 +1,10 @@
 <script setup>
+    //驗證身分
+    definePageMeta({
+        middleware:['auth']
+    })
+    const user = useSupabaseUser();
+    //取得flavorlist及amountlist
     const flavorlist = ref([]);
     const amountlist = ref([]);
     const { data, error } = await useFetch(`/api/sampleapply`);
@@ -9,6 +15,7 @@
         flavorlist.value = fetchedFlavorlist;
         amountlist.value = fetchedAmountlist;
     }
+    //雙向綁定資料
     const info = useState('applyInfo', () => {
         return {
             name: '',
@@ -24,10 +31,36 @@
     const onChangeInput = (data, name) => {
         info.value[name] = data;
     }
-    
-    definePageMeta({
-        middleware:['auth']
-    })
+    const handleSubmit = async () =>{
+        const { flavor, amount, ...rest } = info.value;
+        const body = {
+            ...rest,
+            flavor: parseInt(flavor),
+            amount: parseInt(amount),
+            userID: user.value.id
+        }
+        try{
+            await $fetch("/api/sampleapply", {
+                method: "POST",
+                body: body
+            })
+            info.value = {
+                name: '',
+                phone: '',
+                email: '',
+                address: '',
+                flavor: '',
+                amount: '',
+                date: ''
+            };
+            alert("申請成功!");
+            navigateTo("/")
+        }
+        catch(error) {
+            alert(error.statusMessage);
+        }
+    }
+
 </script>
 
 <template>
@@ -44,6 +77,6 @@
             <ApplyDate title="Date of Pickup*" name="date" @change-input="onChangeInput"/>
             <ApplyInput title="Address*" type="text" name="address"  placeholder="" @change-input="onChangeInput"/>
         </div>
-        <button class="block my-10 mx-auto w-4xl py-1 px-7 rounded-md bg-orange-200 hover:bg-black hover:text-white">Apply</button>
+        <button class="block my-10 mx-auto w-4xl py-1 px-7 rounded-md bg-orange-200 hover:bg-black hover:text-white" @click="handleSubmit">Apply</button>
     </div>
 </template>

@@ -38,11 +38,11 @@
     }
 
     const handlerPriceChange = () => {
-        // updateModalStatus('price');
         if(priceRange.value.min && priceRange.value.max) {
             if(parseInt(priceRange.value.min) > parseInt(priceRange.value.max)) return
         }
         router.push({
+            path: `/productlist`,
             query: {
                 minPrice: priceRange.value.min,
                 maxPrice: priceRange.value.max
@@ -60,7 +60,7 @@
 
 <template>
     <!-- BISCUIT SIDE BAR -->
-    <div class="lg:w-[30%] md:w-[30%] md:mr-[5%] mr-0 mb-2 z-30 w-[100%]">
+    <div class="md:w-[30%] md:mr-[5%] mb-4 w-[100%]">
         <div class="flex flex-wrap justify-between relative border w-[100%]">
             <p class="bg-black text-white p-2 w-1/3">Flavor</p>
             <p class="py-2 px-1 text-center font-medium w-2/3 border-b font-bold cursor-pointer" @click="updateModalStatus('flavor')">{{route.params.flavor || 'ALL'}}</p>

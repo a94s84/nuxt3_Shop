@@ -1,23 +1,24 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient();
-export default defineEventHandler ( async() => {
-    const result = {}
+export default defineEventHandler(async () => {
     try {
         const [flavorlist, amountlist] = await Promise.all([
             prisma.flavor.findMany(),
             prisma.sampleAmount.findMany()
         ]);
 
-        result.flavorlist = flavorlist;
-        result.amountlist = amountlist;
+        if (!flavorlist.length || !amountlist.length) {
+            throw createError({
+                statusCode: 404,
+                statusMessage: 'FlavorList or AmountList does not exist'
+            });
+        }
+
+        return { flavorlist, amountlist };
     } catch (error) {
         throw createError({
-            statusCode: 500,
-            statusMessage: 'Internal Server Error',
-            message: error.message
+            statusCode: error.statusCode,
+            statusMessage: error.statusMessage
         });
-    } finally {
-        await prisma.$disconnect();
     }
-    return result
 })

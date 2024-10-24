@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="w-1/2 mb-5 cursor-pointer">
+    <div class="sm:w-1/2 w-3/4 mb-5 cursor-pointer">
         <img :src="imgurl">
     </div>
 </template>

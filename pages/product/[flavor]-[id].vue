@@ -17,7 +17,7 @@
     })
 </script>
 <template>
-    <div v-if="biscuit" class="md:w-[65%] lg:justify-start p-4 flex flex-wrap relative justify-center">
+    <div v-if="biscuit" class="md:w-[65%] lg:justify-start md:p-4 flex flex-wrap relative justify-center">
         <ProductDetailMainPic :imgurl="biscuit.url" />
         <ProductDetailInfo :biscuit="biscuit"/>
     </div>
