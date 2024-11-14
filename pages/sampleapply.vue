@@ -15,7 +15,7 @@
         flavorlist.value = fetchedFlavorlist;
         amountlist.value = fetchedAmountlist;
     }
-    //雙向綁定資料
+    //綁定資料
     const info = useState('applyInfo', () => {
         return {
             name: '',

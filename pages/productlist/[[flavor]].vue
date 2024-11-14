@@ -30,7 +30,7 @@
         }
     }
     useHead({
-        title:`Butter in ${route.params.flavor ? route.params.flavor : 'Biscuit'}`        
+        title:`Butter in ${route.params.flavor ? route.params.flavor : 'Biscuit'}`,
     })
     definePageMeta({
         layout: 'layoutproducts',

@@ -26,13 +26,15 @@ model Products {
 }
 
 model Flavor {
-  id   Int    @id @default(autoincrement())
-  name String
+  id              Int               @id @default(autoincrement())
+  name            String
+  sampleApplyData SampleApplyData[]
 }
 
 model SampleAmount {
-  id        Int               @id @default(autoincrement())
-  name      String
+  id              Int               @id @default(autoincrement())
+  name            String
+  sampleApplyData SampleApplyData[]
 }
 
 model SampleApplyData {
@@ -45,4 +47,6 @@ model SampleApplyData {
   date     String
   address  String
   userID   String
+  flavor   Flavor       @relation(fields: [flavorID], references: [id])
+  amount   SampleAmount @relation(fields: [amountID], references: [id])
 }
