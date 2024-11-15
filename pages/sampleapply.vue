@@ -60,17 +60,17 @@
             alert(error.statusMessage);
         }
     }
-
+    const config = useRuntimeConfig()
 </script>
 
 <template>
     <div class="max-w-2xl mx-auto pb-10">
         <h1 class="text-center text-4xl mt-10 mb-5">Try these best Biscuits ...</h1>
         <p class="text-center text-xl mb-10">Apply Form</p>
-        <div class="h-[220px] my-5 bg-no-repeat bg-cover bg-bottom bg-[url('https://www.but.com.tw/system/butters/background_images/000/000/022/medium/1920x892-03_mini.jpg')]"></div>
+        <div class="h-[220px] my-5 bg-no-repeat bg-cover bg-bottom" :style="{backgroundImage:`url(${config.public.supabase.url}/storage/v1/object/public/images/public/apply_bg.webp)`}"></div>
         <div class="my-10 border-t p-3 flex flex-wrap justify-between">
             <ApplyInput title="Name*" type="text" name="name" placeholder="" @change-input="onChangeInput"/>
-            <ApplyInput title="Phone Number*" type="tel" name="phone" placeholder="09-0000-0000" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" @change-input="onChangeInput"/>
+            <ApplyInput title="Phone Number*" type="tel" name="phone" placeholder="" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" @change-input="onChangeInput"/>
             <ApplyInput title="Email*" type="email" name="email"  placeholder="" @change-input="onChangeInput"/>
             <ApplySelect title="Biscuit Flavor*" :options="flavorlist" name="flavor" @change-input="onChangeInput" />
             <ApplySelect title="Estimated Amount*" :options="amountlist" name="amount" @change-input="onChangeInput" />
